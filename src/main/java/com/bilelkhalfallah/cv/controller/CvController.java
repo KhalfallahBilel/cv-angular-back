@@ -24,7 +24,7 @@ public class CvController {
     }
 
     @PostMapping("/cvList")
-    public List<Cv> save(Cv cv){
-        return (List<Cv>) iCvRepository.save(cv);
+    public Cv save(Cv cv){
+        return iCvRepository.save(cv);
     }
 }
