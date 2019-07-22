@@ -2,6 +2,7 @@ package com.bilelkhalfallah.cv.controller;
 
 import com.bilelkhalfallah.cv.model.Cv;
 import com.bilelkhalfallah.cv.repository.ICvRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,8 @@ public class CvController {
     public CvController() {
     }
 
-    private ICvRepository iCvRepository;
+    @Autowired
+    ICvRepository iCvRepository;
 
     @GetMapping("/cvList")
     public List<Cv> getCvList(){

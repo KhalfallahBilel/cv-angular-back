@@ -11,7 +11,8 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 public class Cv extends Auditable<String> {
 
-    @Id@GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     public Cv(Date createdDate, Date lastModifiedDate, long id) {
