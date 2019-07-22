@@ -15,7 +15,7 @@ public class Language extends Auditable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "languageName")
+    @Column(name = "language_name")
     private String languageName;
 
     @Column(name = "value")

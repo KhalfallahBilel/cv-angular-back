@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "USERS")
 @EntityListeners(AuditingEntityListener.class)
 public class User extends Auditable {
 
@@ -15,19 +15,19 @@ public class User extends Auditable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "userName")
+    @Column(name = "user_name")
     private String userName;
 
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "password")
     private String password;
 
-    @Column(name = "authdata")
+    @Column(name = "auth_data")
     private String authdata;
 
     public User(Date createdDate, Date lastModifiedDate, long id, String userName, String firstName, String lastName, String password, String authdata) {

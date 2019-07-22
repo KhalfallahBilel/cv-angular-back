@@ -18,7 +18,7 @@ public class Training extends Auditable {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "schoolName")
+    @Column(name = "school_name")
     private String schoolName;
 
     @Column(name = "diploma")

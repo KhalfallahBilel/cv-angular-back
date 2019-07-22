@@ -18,7 +18,7 @@ public class Experience extends Auditable {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "companyName")
+    @Column(name = "company_name")
     private String companyName;
 
     @Column(name = "poste")

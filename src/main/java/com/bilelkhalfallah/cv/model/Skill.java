@@ -18,7 +18,7 @@ public class Skill extends Auditable {
     @Column(name = "skill")
     private String skill;
 
-    @Column(name = "skillName")
+    @Column(name = "skill_name")
     private String skillName;
 
     @Column(name = "value")
