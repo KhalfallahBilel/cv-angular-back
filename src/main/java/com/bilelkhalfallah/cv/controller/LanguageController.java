@@ -30,10 +30,10 @@ public class LanguageController {
     }
 
     @GetMapping("languages/{id}")
-    public ResponseEntity<Language> getById(@PathVariable(value = "id") Long languageId){
-        Language language = iLanguageRepository.findById(languageId)
+    public ResponseEntity<Language> getById(@PathVariable(value = "id") long id){
+        Language language = iLanguageRepository.findById(id)
         .orElseThrow(
-                () -> new ResourceNotFoundException("Language not found ::" +languageId)
+                () -> new ResourceNotFoundException("Language not found ::" +id)
         );
         return ResponseEntity.ok().body(language);
     }

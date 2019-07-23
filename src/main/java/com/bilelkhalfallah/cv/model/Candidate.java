@@ -9,7 +9,7 @@ import java.util.Date;
 @Entity
 @Table(name="CANDIDATE")
 @EntityListeners(AuditingEntityListener.class)
-public class Candidate extends Auditable<String>{
+public class Candidate extends Auditable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -41,6 +41,8 @@ public class Candidate extends Auditable<String>{
 
     @Column(name = "picture")
     private String picture;
+
+
 
     public Candidate(Date createdDate, Date lastModifiedDate, long id, String firstName, String lastName, String speciality, String mobile, String address, String email, String link, String about, String picture) {
         super(createdDate, lastModifiedDate);

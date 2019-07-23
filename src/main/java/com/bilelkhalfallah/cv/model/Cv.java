@@ -9,7 +9,7 @@ import java.util.Date;
 @Entity
 @Table(name="CV")
 @EntityListeners(AuditingEntityListener.class)
-public class Cv extends Auditable<String> {
+public class Cv extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -13,7 +13,7 @@ public class Skill extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Column(name = "skill")
     private String skill;
@@ -22,9 +22,11 @@ public class Skill extends Auditable {
     private String skillName;
 
     @Column(name = "value")
-    private int value;
+    private Long value;
 
-    public Skill(Date createdDate, Date lastModifiedDate, long id, String skill, String skillName, int value) {
+
+
+    public Skill(Date createdDate, Date lastModifiedDate, Long id, String skill, String skillName, Long value) {
         super(createdDate, lastModifiedDate);
         this.id = id;
         this.skill = skill;
@@ -32,11 +34,27 @@ public class Skill extends Auditable {
         this.value = value;
     }
 
-    public long getId() {
+    public Skill(Long id, String skill, String skillName, Long value) {
+        this.id = id;
+        this.skill = skill;
+        this.skillName = skillName;
+        this.value = value;
+    }
+
+    public Skill(String skill, String skillName, Long value) {
+        this.skill = skill;
+        this.skillName = skillName;
+        this.value = value;
+    }
+
+    public Skill() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -56,11 +74,11 @@ public class Skill extends Auditable {
         this.skillName = skillName;
     }
 
-    public int getValue() {
+    public Long getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(long value) {
         this.value = value;
     }
 

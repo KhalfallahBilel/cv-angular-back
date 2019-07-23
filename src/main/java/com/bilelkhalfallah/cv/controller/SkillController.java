@@ -27,6 +27,7 @@ public class SkillController {
 
     @PostMapping("/skills")
     public Skill save(Skill skill){
+        System.out.println(skill);
         return iSkillRepository.save(skill);
     }
 

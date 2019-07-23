@@ -11,9 +11,11 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 public class Language extends Auditable {
 
+    public Language() {}
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Column(name = "language_name")
     private String languageName;
@@ -21,18 +23,29 @@ public class Language extends Auditable {
     @Column(name = "value")
     private String value;
 
-    public Language(Date createdDate, Date lastModifiedDate, long id, String languageName, String value) {
+    public Language(Date createdDate, Date lastModifiedDate, Long id, String languageName, String value) {
         super(createdDate, lastModifiedDate);
         this.id = id;
         this.languageName = languageName;
         this.value = value;
     }
 
-    public long getId() {
+    public Language(Date createdDate, Date lastModifiedDate, String languageName, String value) {
+        super(createdDate, lastModifiedDate);
+        this.languageName = languageName;
+        this.value = value;
+    }
+
+    public Language(String languageName, String value) {
+        this.languageName = languageName;
+        this.value = value;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
