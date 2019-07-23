@@ -13,18 +13,25 @@ public class Cv extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
-    public Cv(Date createdDate, Date lastModifiedDate, long id) {
+    public Cv(Date createdDate, Date lastModifiedDate, Long id) {
         super(createdDate, lastModifiedDate);
         this.id = id;
     }
 
-    public long getId() {
+    public Cv( Long id) {
+        this.id = id;
+    }
+
+    public Cv() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

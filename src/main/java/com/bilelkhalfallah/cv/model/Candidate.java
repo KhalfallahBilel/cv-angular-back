@@ -13,7 +13,7 @@ public class Candidate extends Auditable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -44,7 +44,7 @@ public class Candidate extends Auditable{
 
 
 
-    public Candidate(Date createdDate, Date lastModifiedDate, long id, String firstName, String lastName, String speciality, String mobile, String address, String email, String link, String about, String picture) {
+    public Candidate(Date createdDate, Date lastModifiedDate, Long id, String firstName, String lastName, String speciality, String mobile, String address, String email, String link, String about, String picture) {
         super(createdDate, lastModifiedDate);
         this.id = id;
         this.firstName = firstName;
@@ -58,11 +58,39 @@ public class Candidate extends Auditable{
         this.picture = picture;
     }
 
-    public long getId() {
+    public Candidate( String firstName, String lastName, String speciality, String mobile, String address, String email, String link, String about, String picture) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.speciality = speciality;
+        this.mobile = mobile;
+        this.address = address;
+        this.email = email;
+        this.link = link;
+        this.about = about;
+        this.picture = picture;
+    }
+
+    public Candidate( Long id, String firstName, String lastName, String speciality, String mobile, String address, String email, String link, String about, String picture) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.speciality = speciality;
+        this.mobile = mobile;
+        this.address = address;
+        this.email = email;
+        this.link = link;
+        this.about = about;
+        this.picture = picture;
+    }
+
+    public Candidate() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
